@@ -49,6 +49,7 @@ The REST API to the example app is described below.
 ### Request
 
 `POST /notes`
+data { note : string }
 
     curl -i -H 'Accept: application/json' -d 'note=Foo' http://localhost:3000/notes
 
@@ -85,6 +86,7 @@ The REST API to the example app is described below.
 ### Request
 
 `PUT /notes/:id`
+data { note : string }
 
     curl -i -H 'Accept: application/json' -X PUT -d 'name=Bar' http://localhost:3000/notes/fda1f
 
@@ -97,7 +99,7 @@ The REST API to the example app is described below.
     Content-Type: application/json
     Content-Length: 41
 
-    {"id":1,"name":"Foo","status":"changed2"}
+    {"id":1,"name":"Bar","status":"changed2"}
 
 ## Delete a Note
 
