@@ -4,8 +4,11 @@ This is a basic example of a Note Taking Application providing a
 REST API.
 
 The application uses `Express`, `Typescript` and `Sequelize`.
+
 The Data Storage used is `SQLite`.
+
 Can utilize `.env` file to configure the application.
+
 
 ## Clone the repository
 
