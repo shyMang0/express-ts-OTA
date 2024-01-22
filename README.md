@@ -41,7 +41,7 @@ The REST API to the example app is described below.
     Content-Type: application/json; charset=utf-8
     Connection: keep-alive
 
-    [{"id":"fda1f","note":"Foo","created_at":"2024-01-22T13:28:38.002Z","updated_at":"2024-01-22T13:28:38.002Z"}]
+    [{"id":"5a09a","note":"Foo","created_at":"2024-01-22T13:28:38.002Z","updated_at":"2024-01-22T13:28:38.002Z"}]
 
 ## Create a new Note
 
@@ -61,7 +61,7 @@ The REST API to the example app is described below.
     Connection: close
     Content-Type: application/json
 
-    {"note":"Foo","id":"fda1f","created_at":"2024-01-22T13:28:38.002Z"}
+    {"note":"Foo","id":"5a09a","created_at":"2024-01-22T13:28:38.002Z"}
 
 ## Get a specific Note
 
@@ -69,7 +69,7 @@ The REST API to the example app is described below.
 
 `GET /notes/:id`
 
-    curl -i -H 'Accept: application/json' http://localhost:3000/notes/fda1f
+    curl -i -H 'Accept: application/json' http://localhost:3000/notes/5a09a
 
 ### Response
 
@@ -78,7 +78,7 @@ The REST API to the example app is described below.
     Status: 200 OK
     Content-Type: application/json
 
-    {"id":"fda1f","note":"Foo","created_at":"2024-01-22T13:28:38.002Z","updated_at":"2024-01-22T13:28:38.002Z"}
+    {"id":"5a09a","note":"Foo","created_at":"2024-01-22T13:28:38.002Z","updated_at":"2024-01-22T13:28:38.002Z"}
 
 ## Update a Note
 
@@ -88,7 +88,7 @@ The REST API to the example app is described below.
 
 `data { note : string }`
 
-    curl -i -H 'Accept: application/json' -X PUT -d 'name=Bar' http://localhost:3000/notes/fda1f
+    curl -i -H 'Accept: application/json' -X PUT -d 'name=Bar' http://localhost:3000/notes/5a09a
 
 ### Response
 
@@ -98,7 +98,7 @@ The REST API to the example app is described below.
     Connection: close
     Content-Type: application/json
 
-    {"id":"fda1f","note":"Bar","created_at":"2024-01-22T13:28:38.002Z","updated_at":"2024-01-22T13:28:38.002Z"}
+    {"id":"5a09a","note":"Bar","created_at":"2024-01-22T13:28:38.002Z","updated_at":"2024-01-22T13:28:38.002Z"}
 
 ## Delete a Note
 
@@ -106,7 +106,7 @@ The REST API to the example app is described below.
 
 `DELETE /notes/:id`
 
-    curl -i -H 'Accept: application/json' -X DELETE http://localhost:3000/notes/fda1f
+    curl -i -H 'Accept: application/json' -X DELETE http://localhost:3000/notes/5a09a
 
 ### Response
 
