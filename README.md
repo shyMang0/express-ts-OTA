@@ -11,7 +11,7 @@
 ## (Method 1) - Running on Pre-Built Files (dist)
 
 `cd dist`
-`cd node app.js`
+`node app.js`
 
 
 ## (Method 2) - Rebuild Project
