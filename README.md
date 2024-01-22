@@ -18,9 +18,9 @@
 
 ###### Install dependencies
    `npm install`
-   ## Build
+###### Build Files
    `npm run build`
-   ## Run
+###### Run
    `npm start`
 
 
