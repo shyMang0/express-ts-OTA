@@ -25,5 +25,6 @@
 
 
 The app will now be running on http://localhost:3000
+
 You may change the default port (3000), and update the .env
    with `PORT=3001`
