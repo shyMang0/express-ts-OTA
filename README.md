@@ -3,7 +3,9 @@
 This is a basic example of a Note Taking Application providing a
 REST API.
 
-The application uses `Typescript`, `Sequelize` and `Express`.
+The application uses `Express`, `Typescript` and `Sequelize`.
+The Data Storage used is `SQLite`.
+Can utilize `.env` file to configure the application.
 
 ## Clone the repository
 
@@ -17,10 +19,10 @@ The application uses `Typescript`, `Sequelize` and `Express`.
 
     npm run start
 
-## Changing the Port
-
-    update/create a .env 
-    PORT=3001
+## Changing the Port (Optional)
+   default port is 3000
+   update/create a .env 
+   `PORT=3000`
 
 # REST API
 
