@@ -1,12 +1,27 @@
 import express, { Express } from 'express'
 import dotenv from 'dotenv'
-
 import http from 'http'
+import indexRoute from '@/api/routes/index.route'
 
 const app: Express = express()
+
+app.use(express.urlencoded({ extended: false }))
+
 dotenv.config()
 
+// testConnection()
+
+app.use(indexRoute)
+
 startServer()
+
+// async function testConnection() {
+// 	try {
+// 		await dbInstance.testConnection()
+// 	} catch (error) {
+// 		console.error('Error connecting to SQLite database:', error)
+// 	}
+// }
 
 async function startServer() {
 	try {
