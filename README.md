@@ -1,53 +1,13 @@
-# How to run this Node.js Express project
+# REST API Simple Notes Application
 
-## Prerequisites
--   Node.js installed
--   Git installed
+This is a basic example of a Note Taking Application providing a
+REST API.
+
+The application uses `Typescript`, `Sequelize` and `Express`.
 
 ## Clone the repository
 
-`git clone https://github.com/shyMang0/express-ts-OTA.git`
-
-## (Method 1) - Running on Pre-Built Files (dist)
-
-###### Navigate to dist (Prebuilt files)
-`cd dist`
-
-###### Run Application
-`node app.js`
-
-
-## (Method 2) - Rebuild Project
-
-###### Install dependencies
-   `npm install`
-###### Build Files
-   `npm run build`
-###### Run
-   `npm start`
-
-
-The app will now be running on http://localhost:3000
-
-You may change the default port (3000), and update the .env
-   with `PORT=3001`
-
-
-----------------------------------------------------
-# REST API Simple Notes Application
-
-This is a bare-bones example of a Sinatra application providing a REST
-API to a DataMapper-backed model.
-
-The entire application is contained within the `app.rb` file.
-
-`config.ru` is a minimal Rack configuration for unicorn.
-
-`run-tests.sh` runs a simplistic test and generates the API
-documentation below.
-
-It uses `run-curl-tests.rb` which runs each command defined in
-`commands.yml`.
+    git clone https://github.com/shyMang0/express-ts-OTA.git
 
 ## Install
 
