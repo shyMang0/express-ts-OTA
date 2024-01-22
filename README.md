@@ -11,19 +11,20 @@
 ## (Method 1) - Running on Pre-Built Files (dist)
 
 `cd dist`
-`cd node app.js`
+`node app.js`
 
 
 ## (Method 2) - Rebuild Project
 
 ###### Install dependencies
    `npm install`
-   ## Build
+###### Build Files
    `npm run build`
-   ## Run
+###### Run
    `npm start`
 
 
 The app will now be running on http://localhost:3000
+
 You may change the default port (3000), and update the .env
    with `PORT=3001`
