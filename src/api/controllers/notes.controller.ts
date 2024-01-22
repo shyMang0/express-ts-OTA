@@ -14,6 +14,7 @@ export const getAllNotes = async (req: Request, res: Response) => {
 export const createNote = async (req: Request, res: Response) => {
 	const note: unknown = req.body.note
 
+	//implement ZOD later
 	if (!note) return res.status(400).json({ message: 'note is required' })
 
 	const notesInput = <NotesInput>{ note: note }
