@@ -15,7 +15,8 @@ Can utilize `.env` file to configure the application.
     git clone https://github.com/shyMang0/express-ts-OTA.git
 
 ## Install
-
+    cd express-ts-OTA
+    
     npm install
 
 ## Run the app
