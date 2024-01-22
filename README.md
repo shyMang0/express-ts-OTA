@@ -49,7 +49,7 @@ The REST API to the example app is described below.
 ### Request
 
 `POST /notes`
-data { note : string }
+`data { note : string }`
 
     curl -i -H 'Accept: application/json' -d 'note=Foo' http://localhost:3000/notes
 
