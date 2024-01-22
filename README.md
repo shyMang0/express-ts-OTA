@@ -82,7 +82,7 @@ The REST API to the example app is described below.
     Connection: keep-alive
     Content-Length: 2
 
-    []
+    [{"id":"fda1f","note":"Foo","created_at":"2024-01-22T13:28:38.002Z","updated_at":"2024-01-22T13:28:38.002Z"}]
 
 ## Create a new Note
 
