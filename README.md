@@ -10,8 +10,10 @@
 
 ## (Method 1) - Running on Pre-Built Files (dist)
 
+###### Navigate to dist (Prebuilt files)
 `cd dist`
 
+###### Run Application
 `node app.js`
 
 
