@@ -51,7 +51,7 @@ The REST API to the example app is described below.
 
 `POST /notes`
 
-`data { note : string }`
+dataBody `{ note : string }`
 
     curl -i -H 'Accept: application/json' -d 'note=Foo' http://localhost:3000/notes
 
@@ -88,7 +88,7 @@ The REST API to the example app is described below.
 
 `PUT /notes/:id`
 
-`data { note : string }`
+dataBody `{ note : string }`
 
     curl -i -H 'Accept: application/json' -X PUT -d 'name=Bar' http://localhost:3000/notes/5a09a
 
