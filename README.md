@@ -40,7 +40,6 @@ The REST API to the example app is described below.
     X-Powered-By: Express
     Content-Type: application/json; charset=utf-8
     Connection: keep-alive
-    Content-Length: 2
 
     [{"id":"fda1f","note":"Foo","created_at":"2024-01-22T13:28:38.002Z","updated_at":"2024-01-22T13:28:38.002Z"}]
 
@@ -49,6 +48,7 @@ The REST API to the example app is described below.
 ### Request
 
 `POST /notes`
+
 `data { note : string }`
 
     curl -i -H 'Accept: application/json' -d 'note=Foo' http://localhost:3000/notes
@@ -60,9 +60,8 @@ The REST API to the example app is described below.
     Status: 201 Created
     Connection: close
     Content-Type: application/json
-    Content-Length: 36
 
-    {"message":"new row created","data":{"note":"Foo","id":"fda1f","created_at":"2024-01-22T13:28:38.002Z"}}
+    {"note":"Foo","id":"fda1f","created_at":"2024-01-22T13:28:38.002Z"}
 
 ## Get a specific Note
 
@@ -86,7 +85,8 @@ The REST API to the example app is described below.
 ### Request
 
 `PUT /notes/:id`
-data { note : string }
+
+`data { note : string }`
 
     curl -i -H 'Accept: application/json' -X PUT -d 'name=Bar' http://localhost:3000/notes/fda1f
 
@@ -97,9 +97,8 @@ data { note : string }
     Status: 200 OK
     Connection: close
     Content-Type: application/json
-    Content-Length: 41
 
-    {"id":1,"name":"Bar","status":"changed2"}
+    {"id":"fda1f","note":"Bar","created_at":"2024-01-22T13:28:38.002Z","updated_at":"2024-01-22T13:28:38.002Z"}
 
 ## Delete a Note
 
@@ -113,6 +112,7 @@ data { note : string }
 
     HTTP/1.1 204 No Content
     Date: Thu, 24 Feb 2011 12:36:32 GMT
-    Status: 204 No Content
-    Connection: close
+    Status: 200 No Content
+
+    {"message":"Note Deleted"}
 
