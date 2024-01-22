@@ -8,16 +8,20 @@
 
 `git clone https://github.com/shyMang0/express-ts-OTA.git`
 
+## (Method 1) - Running on Pre-Built Files (dist)
+
+`cd dist`
+`cd node app.js`
+
+
+## (Method 2) - Rebuild Project
+
 ###### Install dependencies
    `npm install`
    ## Build
    `npm run build`
    ## Run
    `npm start`
-
-###### RUNNING ON PRE BUILT FILES (DIST)
-   Navigate to the dist folder and run the following command
-   `node app.js`
 
 
 The app will now be running on http://localhost:3000
