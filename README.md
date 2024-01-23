@@ -45,12 +45,7 @@ The REST API to the example app is described below.
 
 ### Response
 
-    HTTP/1.1 200 OK
-    X-Powered-By: Express
-    Content-Type: application/json; charset=utf-8
-    Connection: keep-alive
-
-    [{"id":"5a09a","title":"FooTitle","body":"FooBody","created_at":"2024-01-22T13:28:38.002Z","updated_at":"2024-01-22T13:28:38.002Z"}]
+    [{"id":"118e4","title":"FooTitle","body":"FooBody","created_at":"2024-01-23T02:27:02.699Z","updated_at":"2024-01-23T02:27:02.699Z"}]
 
 ## Create a new Note
 
@@ -60,15 +55,9 @@ The REST API to the example app is described below.
 
 dataBody `{ title : string, body : string }`
 
-    curl -i -H 'Accept: application/json' -d 'note=Foo' http://localhost:3000/notes
+    curl -i -X POST -H "Accept: application/json" -d "title=FooTitle&body=FooBody" http://localhost:3000/notes
 
 ### Response
-
-    HTTP/1.1 201 Created
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 201 Created
-    Connection: close
-    Content-Type: application/json
 
     {"id":"5a09a","title":"FooTitle","body":"FooBody","created_at":"2024-01-22T13:28:38.002Z"}
 
@@ -82,11 +71,6 @@ dataBody `{ title : string, body : string }`
 
 ### Response
 
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 200 OK
-    Content-Type: application/json
-
     {"id":"5a09a","title":"FooTitle","body":"FooBody","created_at":"2024-01-22T13:28:38.002Z","updated_at":"2024-01-22T13:28:38.002Z"}
 
 ## Update a Note
@@ -97,15 +81,9 @@ dataBody `{ title : string, body : string }`
 
 dataBody `{ title : string, body : string }`
 
-    curl -i -H 'Accept: application/json' -X PUT -d 'title=Bar&body=BarBody' http://localhost:3000/notes/5a09a
+    curl -i -X PUT -H "Accept: application/json" -d "title=UpdatedTitle&body=UpdatedBody" http://localhost:3000/notes/118e4
 
 ### Response
-
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:31 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
 
     {"id":"5a09a","title":"FooTitle","body":"FooBody","created_at":"2024-01-22T13:28:38.002Z","updated_at":"2024-01-22T13:28:38.002Z"}
 
@@ -118,10 +96,6 @@ dataBody `{ title : string, body : string }`
     curl -i -H 'Accept: application/json' -X DELETE http://localhost:3000/notes/5a09a
 
 ### Response
-
-    HTTP/1.1 204 No Content
-    Date: Thu, 24 Feb 2011 12:36:32 GMT
-    Status: 200 No Content
 
     {"message":"Note Deleted"}
 
