@@ -47,7 +47,7 @@ The REST API to the example app is described below.
     Content-Type: application/json; charset=utf-8
     Connection: keep-alive
 
-    [{"id":"5a09a","note":"Foo","created_at":"2024-01-22T13:28:38.002Z","updated_at":"2024-01-22T13:28:38.002Z"}]
+    [{"id":"5a09a","title":"FooTitle","body":"FooBody","created_at":"2024-01-22T13:28:38.002Z","updated_at":"2024-01-22T13:28:38.002Z"}]
 
 ## Create a new Note
 
@@ -55,7 +55,7 @@ The REST API to the example app is described below.
 
 `POST /notes`
 
-dataBody `{ note : string }`
+dataBody `{ title : string, body : string }`
 
     curl -i -H 'Accept: application/json' -d 'note=Foo' http://localhost:3000/notes
 
@@ -67,7 +67,7 @@ dataBody `{ note : string }`
     Connection: close
     Content-Type: application/json
 
-    {"note":"Foo","id":"5a09a","created_at":"2024-01-22T13:28:38.002Z"}
+    {"id":"5a09a","title":"FooTitle","body":"FooBody","created_at":"2024-01-22T13:28:38.002Z"}
 
 ## Get a specific Note
 
@@ -84,7 +84,7 @@ dataBody `{ note : string }`
     Status: 200 OK
     Content-Type: application/json
 
-    {"id":"5a09a","note":"Foo","created_at":"2024-01-22T13:28:38.002Z","updated_at":"2024-01-22T13:28:38.002Z"}
+    {"id":"5a09a","title":"FooTitle","body":"FooBody","created_at":"2024-01-22T13:28:38.002Z","updated_at":"2024-01-22T13:28:38.002Z"}
 
 ## Update a Note
 
@@ -92,9 +92,9 @@ dataBody `{ note : string }`
 
 `PUT /notes/:id`
 
-dataBody `{ note : string }`
+dataBody `{ title : string, body : string }`
 
-    curl -i -H 'Accept: application/json' -X PUT -d 'name=Bar' http://localhost:3000/notes/5a09a
+    curl -i -H 'Accept: application/json' -X PUT -d 'title=Bar&body=BarBody' http://localhost:3000/notes/5a09a
 
 ### Response
 
@@ -104,7 +104,7 @@ dataBody `{ note : string }`
     Connection: close
     Content-Type: application/json
 
-    {"id":"5a09a","note":"Bar","created_at":"2024-01-22T13:28:38.002Z","updated_at":"2024-01-22T13:28:38.002Z"}
+    {"id":"5a09a","title":"FooTitle","body":"FooBody","created_at":"2024-01-22T13:28:38.002Z","updated_at":"2024-01-22T13:28:38.002Z"}
 
 ## Delete a Note
 
