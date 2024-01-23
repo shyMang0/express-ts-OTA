@@ -11,6 +11,8 @@ Validates inputs using `Zod`.
 
 Can utilize `.env` file to configure the application.
 
+No Database Migrations needed, Sqlite Tables are built automatically.
+
 
 ## Clone the repository
 
