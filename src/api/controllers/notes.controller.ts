@@ -64,8 +64,8 @@ export const deleteNote = async (req: Request, res: Response) => {
 
 	try {
 		const data = await NotesService.deleteById(id)
-		return res.status(200).json({ message: 'row deleted', id })
+		return res.status(200).json({ success: true, message: 'row deleted', id })
 	} catch (error: any) {
-		return res.status(404).json({ message: error.message || error })
+		return res.status(404).json({ success: false, message: error.message || error })
 	}
 }
