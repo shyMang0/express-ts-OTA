@@ -36,7 +36,7 @@ export const getNote = async (req: Request, res: Response) => {
 		const data = await NotesService.getById(id)
 		res.json({ data })
 	} catch (error: any) {
-		res.status(404).json({ messagess: error.message || error })
+		res.status(404).json({ message: error.message || error })
 	}
 }
 

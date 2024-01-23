@@ -71,7 +71,7 @@ dataBody `{ title : string, body : string }`
 
 ### Response
 
-    {"id":"5a09a","title":"FooTitle","body":"FooBody","created_at":"2024-01-22T13:28:38.002Z","updated_at":"2024-01-22T13:28:38.002Z"}
+    {"id":"7b4bd","title":"FooTitle","body":"FooBody","created_at":"2024-01-23T04:05:10.963Z","updated_at":"2024-01-23T04:05:10.963Z"}
 
 ## Update a Note
 
@@ -85,7 +85,7 @@ dataBody `{ title : string, body : string }`
 
 ### Response
 
-    {"id":"5a09a","title":"FooTitle","body":"FooBody","created_at":"2024-01-22T13:28:38.002Z","updated_at":"2024-01-22T13:28:38.002Z"}
+    {"success":true,"message":"row updated","data":{"id":"7b4bd","title":"UpdatedTitle","body":"UpdatedBody","created_at":"2024-01-23T04:05:10.963Z","updated_at":"2024-01-23T04:08:35.115Z"}}
 
 ## Delete a Note
 
@@ -97,5 +97,5 @@ dataBody `{ title : string, body : string }`
 
 ### Response
 
-    {"success""message":"Note Deleted"}
+    {"success":true,"message":"Note Deleted"}
 
