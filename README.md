@@ -7,6 +7,8 @@ The application uses `Express`, `Typescript` and `Sequelize`.
 
 The Data Storage used is `SQLite`.
 
+Validates inputs using `Zod`.
+
 Can utilize `.env` file to configure the application.
 
 
