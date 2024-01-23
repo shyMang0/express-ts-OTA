@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
 import * as NotesService from '@/api/services/notesService'
-import Notes, { NotesInput } from '@/db/models/notes.model'
+import { NotesInput } from '@/db/models/notes.model'
 
 export const getAllNotes = async (req: Request, res: Response) => {
 	const notes = await NotesService.getAll()
@@ -12,16 +12,18 @@ export const getAllNotes = async (req: Request, res: Response) => {
 }
 
 export const createNote = async (req: Request, res: Response) => {
-	const note: unknown = req.body.note
+	const title: unknown = req.body.title
+	const body: unknown = req.body.body
 
 	//implement ZOD later
-	if (!note) return res.status(400).json({ message: 'note is required' })
+	if (!title) return res.status(400).json({ message: 'title is required' })
+	if (!body) return res.status(400).json({ message: 'body is required' })
 
-	const notesInput = <NotesInput>{ note: note }
+	const notesInput = <NotesInput>{ title, body }
 
 	try {
 		const data = await NotesService.create(notesInput)
-		res.status(201).json({ message: 'new row created', data })
+		res.status(201).json({ message: 'new note created', data })
 	} catch (error: any) {
 		res.status(400).json({ message: error.message || error })
 	}
@@ -40,11 +42,12 @@ export const getNote = async (req: Request, res: Response) => {
 
 export const updateNote = async (req: Request, res: Response) => {
 	const { id } = req.params // slug
-	const note: unknown = req.body.note
+	const title: unknown = req.body.title
+	const body: unknown = req.body.body
 	if (!id) return res.status(400).json({ message: 'id is required' })
-	if (!note) return res.status(400).json({ message: 'note is required' })
+	if (!title && !body) return res.status(400).json({ message: 'either title or body is required' })
 
-	const notesInput = <NotesInput>{ note: note }
+	const notesInput = <NotesInput>{ title, body }
 
 	try {
 		const data = await NotesService.update(id, notesInput)

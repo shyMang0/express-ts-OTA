@@ -3,14 +3,16 @@ import sequelize from '@/db/config/sequelize'
 
 interface NotesAttributes {
 	id: string
-	note: string
+	title: string
+	body: string
 	created_at?: Date
 	updated_at?: Date
 }
 
 export interface NotesInput {
 	id: string
-	note: string
+	title?: string
+	body?: string
 	updated_at?: Date
 }
 
@@ -18,7 +20,8 @@ export interface NotesOuput extends Required<NotesAttributes> {}
 
 class Notes extends Model<NotesAttributes, NotesInput> implements NotesAttributes {
 	public id!: string
-	public note!: string
+	public title!: string
+	public body!: string
 	public readonly created_at?: Date
 	public updated_at?: Date
 	public deleted_at?: Date
@@ -31,7 +34,11 @@ Notes.init(
 			allowNull: true,
 			primaryKey: true
 		},
-		note: {
+		title: {
+			type: DataTypes.STRING,
+			allowNull: false
+		},
+		body: {
 			type: DataTypes.STRING,
 			allowNull: false
 		},
