@@ -25,6 +25,7 @@ Can utilize `.env` file to configure the application.
 
 ## Changing the Port (Optional)
    default port is 3000
+   
    update/create a .env 
    `PORT=3000`
 
