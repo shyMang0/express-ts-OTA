@@ -59,7 +59,7 @@ dataBody `{ title : string, body : string }`
 
 ### Response
 
-    {"id":"5a09a","title":"FooTitle","body":"FooBody","created_at":"2024-01-22T13:28:38.002Z"}
+    {"success":true,"message":"new note created","data":{"title":"FooTitle","body":"FooBody","id":"7b4bd","updated_at":"2024-01-23T04:05:10.963Z","created_at":"2024-01-23T04:05:10.963Z"}}
 
 ## Get a specific Note
 
@@ -97,5 +97,5 @@ dataBody `{ title : string, body : string }`
 
 ### Response
 
-    {"message":"Note Deleted"}
+    {"success""message":"Note Deleted"}
 
