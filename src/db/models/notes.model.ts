@@ -41,14 +41,6 @@ Notes.init(
 		body: {
 			type: DataTypes.STRING,
 			allowNull: false
-		},
-		created_at: {
-			type: DataTypes.DATE,
-			allowNull: true
-		},
-		updated_at: {
-			type: DataTypes.DATE,
-			allowNull: true
 		}
 	},
 	{
