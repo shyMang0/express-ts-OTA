@@ -2,6 +2,7 @@ import express, { Express } from 'express'
 import dotenv from 'dotenv'
 import http from 'http'
 import indexRoute from '@/api/routes/index.route'
+import { engine } from 'express-handlebars'
 
 const app: Express = express()
 
@@ -10,6 +11,10 @@ app.use(express.urlencoded({ extended: false }))
 dotenv.config()
 
 // testConnection()
+
+app.engine('handlebars', engine())
+app.set('view engine', 'handlebars')
+app.set('views', './src/views')
 
 app.use(indexRoute)
 
